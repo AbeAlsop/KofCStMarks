@@ -1,23 +1,90 @@
-<div style="text-align:center">
-<img src="KOC.jpg" style="width:200px;max-width=100%"></img>
 
-<h1>Knights of Columbus<h1>
-<h2>Council 12172</h2>
-<p>St. Mark's Parish
-<br/>Boise, Idaho</p>
-
-<div style="border:1px solid black;width:300pt;text-align:left;margin:25px auto">
-<ul>
-<li>
-<a href="https://kofc12172.square.site/">Keep Christ in Christmas annual Christmas card sale</a>
-</li>
-<li>
-<a href="https://www.kofc.org/en/contact/update-contact-information.html">Update your personal information here.</a>
-</li>
-<li>
-<a href="https://checkout.square.site/buy/AEHI5O26HKWXCACRNXZTX7YR">Pay dues here</a>
-</li>
-</ul>
-</div>
-</div>
-
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body {
+            text-align: center;
+        }
+        .top {
+            max-width: 800px;
+        }
+        .bottom {
+            padding-top: 20px;
+            max-width: 800px;
+            clear: both;
+        }
+        .logo {
+            float: left;
+            width: 200px;
+            max-width: 40%;
+        }
+        .title {
+            float: left;
+            padding-left: 100px;
+            text-align: center;
+        }
+        .button {
+            float: left;
+            width: 140px;
+            margin: 5px;
+            padding: 10px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: #801b13;
+            color: #eaebef;
+            border: 3px solid #a58558;
+        }
+        .button:hover {
+            text-decoration: underline;
+            background-color: #a83b33;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 716px) {
+            .button {
+                width: 280px;
+                max-width: 40%;
+            }
+            .title {
+                padding-left: 20px;
+                width: 400px;
+                max-width: 50%
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="logo">
+            <img src="KOC.jpg" style="width:200px;max-width=100%"></img>
+        </div>
+        <div class="title">        
+            <h1>Knights of Columbus<h1>
+            <h2>Council 12172</h2>
+            <p>St. Mark's Parish
+            <br/>Boise, Idaho</p>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="button" onClick="window.open('https://kofc12172.square.site/')">
+            Christmas Card Sale
+        </div>
+        <div class="button" onClick="window.open('https://www.kofc.org/en/contact/update-contact-information.html')">
+            Update Personal Information
+        </div>
+        <div class="button" onClick="window.open('https://checkout.square.site/buy/AEHI5O26HKWXCACRNXZTX7YR')">
+            Pay Dues
+        </div>
+        <div class="button" onClick="window.open('https://www.kofc.org/secure/en/join/join-kofc.html')">
+            New Member Signup
+        </div>
+    </div>
+</body>    
+</html>
