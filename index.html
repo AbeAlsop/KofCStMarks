@@ -18,11 +18,19 @@
             padding-top: 20px;
             max-width: 800px;
             clear: both;
+            text-align: center;
         }
         .logo {
             float: left;
             width: 200px;
             max-width: 40%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        .logo img {
+            width: 100%;
         }
         .title {
             float: left;
@@ -63,13 +71,23 @@
                 max-width: 50%
             }
         }
+        @media screen and (max-width: 360px) {
+            .bottom {
+                width: 160px;
+                margin: auto;
+            }
+            .button {
+                width: 280px;
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
     <div class="top">
         <div class="logo">
-            <img src="KOC.jpg" style="width:200px;max-width=100%"></img>
+            <img src="KOC.jpg"></img>
         </div>
         <div class="title">        
             <h1>Knights of Columbus<h1>
@@ -91,6 +109,7 @@
         <div class="button" onClick="window.open('https://www.kofc.org/secure/en/join/join-kofc.html')">
             New Member Signup
         </div>
+        <div style="clear:both"></div>
     </div>
     </div>
 </body>    
