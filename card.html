@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Card - Knights of Columbus Council 12172</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            member = JSON.parse(
+                '{"member_id": 5084747, "first_name": "Abraham", "middle_name": "D", "last_name": "Alsop", "degree": 3, "council": 12172, "city": "Boise", "state": "ID", "dues_date": "2025-12-31"}'
+            )
+            setText('brother-name-span', member.first_name+' '+member.middle_name+' '+member.last_name)
+            setText('member-num-span', member.member_id)
+            setText('member-degree-span', member.degree==1 ? '1st' : member.degree==2 ? '2nd' : member.degree==3 ? '3rd' : '')
+            setText('council-num-span', member.council)
+            setText('council-city-span', member.city.toUpperCase())
+            setText('council-state-span', member.state)
+
+            dateString = new Date(member.dues_date).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' });
+            setText('dues-date-span', dateString)
+        }
+
+        function setText(span, text) {
+            document.getElementById(span).innerHTML=text;
+        }
+    </script>
+    <div id="rectangle">
+		<div id="knights-text"><span id="knights-span">KNIGHTS OF COLUMBUS</span></div>
+		<div id="certify-text"><span id="certify-span">THIS IS TO CERTIFY THAT</span></div>		
+		<div id="brother-row">
+            <div id="brother-left-text"><span id="brother-left-span">BROTHER</span></div>
+            <div id="brother-name-text"><span id="brother-name-span"></span></div>
+        </div>
+		<div id="member-row">
+            <div id="member-left-text"><span id="member-left-span">MEMBER NO.</span></div>
+            <div id="member-num-text"><span id="member-num-span"></span></div>
+            <div id="member-isa-text"><span id="member-isa-span">IS A</span></div>
+            <div id="member-degree-text"><span id="member-degree-span"></span></div>
+            <div id="member-right-text"><span id="member-right-span">DEGREE MEMBER OF</span></div>
+        </div>
+		<div id="council-row">
+            <div id="council-left-text"><span id="council-left-span">COUNCIL NO.</span></div>
+            <div id="council-num-text"><span id="council-num-span"></span></div>
+            <div id="council-in-text"><span id="council-in-span">IN</span></div>
+            <div id="council-city-text"><span id="council-city-span"></span></div>
+            <div id="council-state-text"><span id="council-state-span"></span></div>
+        </div>
+		<div id="dues-row">
+            <div id="dues-left-text"><span id="dues-left-span">DUES PAID TO:</span></div>
+            <div id="dues-date-text"><span id="dues-date-span"></span></div>
+        </div>
+		<div id="emblem-image"></div>
+		<div id="signature-image"></div>
+		<div id="supreme-text"><span id="supreme-span">SUPREME KNIGHT</span></div>
+	</div>
+</body>
+</html>

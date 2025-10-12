@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#rectangle {
+    background-color: white;
+    width: 100vw;
+    height: 60vw; /* 60vw = (3/5) * 100vw for 5:3 ratio */
+    max-width: 166.67vh; /* 166.67vh = (5/3) * 100vh for 5:3 ratio */
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#knights-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9%;
+    margin-top: 2.5%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: min(4.8vw, 8vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#knights-span {
+    transform: scaleX(1.15)
+}
+
+#certify-text {
+    position: absolute;
+    top: 11.5%;
+    left: 0;
+    width: 100%;
+    height: 6%;
+    margin-top: 2%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: min(1.8vw, 3vh);
+    font-family: Arial, sans-serif;
+}
+
+#certify-span {
+    transform: scaleX(1.05)
+}
+
+#brother-row {
+    position: absolute;
+    top: 20.5%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+#brother-left-text {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(3.3vw, 5.5vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-left: min(3vw, 5vh);
+}
+
+#brother-name-text {
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(3.3vw, 5.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(3vw, 5vh);
+}
+
+#brother-left-span {
+    transform: scaleX(1.05)
+}
+
+#brother-name-span {
+    transform: scaleX(1.1)
+}
+
+#member-row {
+    position: absolute;
+    top: 30.5%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+#member-left-text {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-left: min(2.7vw, 4.5vh);
+}
+
+#member-num-text {
+    width: 16%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(2.7vw, 4.5vh);
+}
+
+#member-isa-text {
+    width: 8%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#member-degree-text {
+    width: 9%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(3.3vw, 5.5vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#member-right-text {
+    width: 42%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#council-row {
+    position: absolute;
+    top: 39%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+#council-left-text {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-left: min(2.7vw, 4.5vh);
+}
+
+#council-num-text {
+    width: 16%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(2.7vw, 4.5vh);
+}
+
+#council-in-text {
+    width: 8%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#council-city-text {
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#council-state-text {
+    width: 16%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-size: min(2.7vw, 4.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: min(0.6vw, 1.0vh);
+}
+
+#dues-row {
+    position: absolute;
+    top: 53%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+#dues-left-text {
+    width: 57%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    font-size: min(3.3vw, 5.5vh);
+    font-family: Arial, sans-serif;
+    padding-left: 30%;
+    padding-right: 0;
+}
+
+#dues-date-text {
+    width: 43%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    font-size: min(3.3vw, 5.5vh);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#dues-left-span {
+    transform: scaleX(1.1)
+}
+
+#dues-date-span {
+    transform: scaleX(1.05)
+}
+
+#emblem-image {
+    position: absolute;
+    bottom: 7.5%;
+    left: 2.7%;
+    width: min(21vw, 35vh);
+    height: min(21vw, 35vh);
+    background-color: white;
+    background-image: url('kofc_emblem_365.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#signature-image {
+    position: absolute;
+    bottom: 7%;
+    right: 8%;
+    width: min(53.9vw, 89.79vh);
+    height: min(16.5vw, 27.5vh);
+    background-color: white;
+    background-image: url('Patrick_Kelly.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#supreme-text {
+    position: absolute;
+    top: 83.33%;
+    left: 40%;
+    width: 25%;
+    height: 6%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: min(2.4vw, 4vh);
+    font-family: Arial, sans-serif;
+}

@@ -36,6 +36,6 @@ def read_response(token: str):
         member = get_member_by_token(token)
     except Exception:
         raise HTTPException(status_code=404, detail="Token not valid")
-    logging.info(f"Received token: {token} | Found member number: {member[0]}")
-    return {"MemberNumber": member[0], "Name": f"{member[2]} {member[4]}"}
+    logging.info(f"Received token: {token} | Found member number: {member.member_id}")
+    return member.toJSON()
 
